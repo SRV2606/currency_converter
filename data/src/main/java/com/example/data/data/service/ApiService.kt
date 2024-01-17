@@ -1,5 +1,7 @@
 package com.example.data.data.service
 
+import com.example.data.data.serverModels.Match
+import com.example.data.data.serverModels.Player
 import com.example.data.data.serverModels.ServerDecathlonSKUItem
 import retrofit2.Response
 import retrofit2.http.GET
@@ -17,4 +19,9 @@ interface ApiService {
     ): Response<List<ServerDecathlonSKUItem>>
 
 
+    @GET("uc")
+    suspend fun getPlayers(@Query("id") id: String = "1fwarr0uygYz7P65WTZCU-IKGKiLC0EBx"): Response<List<Player>>
+
+    @GET("uc")
+    suspend fun getMatches(@Query("id") id: String = "1sVU5OWXFkq-eA4ntV-7yoz37oP-cbCwA"): Response<List<Match>>
 }

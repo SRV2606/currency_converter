@@ -8,11 +8,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.decathlon'
+    namespace 'com.example.starwars'
     compileSdk rootProject.ext.compileSdkVersion
 
     defaultConfig {
-        applicationId "com.example.decathlon"
+        applicationId "com.example.starwars"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         vectorDrawables.useSupportLibrary = true
