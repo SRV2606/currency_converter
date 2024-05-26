@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">starwars</string>
+    <string name="app_name">currency</string>
+    <string name="user_information">Other currencies converted w.r.t base currency as %1$s (Desired amount: %2$s)</string>
+    <string name="desired_amount">Desired Amount</string>
+    <string name="enable_extra_feature">Enable Individual Currency Conversion Feature</string>
+    <string name="from_currency">From Currency</string>
+    <string name="to_currency">To Currency (Base Currency)</string>
+    <string name="convert">Convert</string>
+    <string name="invalid_amount">Invalid amount</string>
+    <string name="initial_user_info">Latest exchange rates of all currencies w.r.t base currency as USD</string>
 </resources>

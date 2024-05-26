@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.StarWars" parent="Theme.MaterialComponents.Light.DarkActionBar" />
+    <style name="Theme.Currency" parent="Theme.MaterialComponents.Light.DarkActionBar" />
+
+    <style name="AppTheme.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu">
+        <!-- Customize your TextInputLayout here -->
+        <item name="boxStrokeColor">@color/colorPrimary</item>
+        <item name="hintTextColor">@color/colorOnSecondary</item>
+        <!-- Add any other customizations you want -->
+    </style>
+
+
+    <!-- In res/values/styles.xml -->
+    <style name="AppTheme" parent="Theme.Currency">
+        <!-- Customize your theme here -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
+        <item name="colorOnPrimary">#ffffff</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+    </style>
+
 
 </resources>

@@ -1,4 +1,4 @@
-package com.example.domain.models
+package com.example.domain.domain.models
 
 class ApiError(message: String) : Exception(message) {
 

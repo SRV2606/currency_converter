@@ -8,11 +8,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.starwars'
+    namespace 'com.example.currency'
     compileSdk rootProject.ext.compileSdkVersion
 
     defaultConfig {
-        applicationId "com.example.starwars"
+        applicationId "com.example.currency"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         vectorDrawables.useSupportLibrary = true
@@ -45,6 +45,9 @@ android {
         viewBinding true
         dataBinding true
     }
+    testOptions {
+        unitTests.includeAndroidResources = true
+    }
 
     packagingOptions {
         resources {
@@ -65,14 +68,26 @@ dependencies {
 
 
     // hilt
-    //hilt
     implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.0"))
 
+    // Dagger Hilt
     implementation "com.google.dagger:hilt-android:2.44"
+    implementation 'androidx.test.ext:junit-ktx:1.1.5'
+    implementation 'androidx.test:runner:1.5.2'
     kapt "com.google.dagger:hilt-android-compiler:2.44"
 
-    testImplementation "com.google.dagger:hilt-android-testing:${versions.hilt}"
-    kaptTest "com.google.dagger:hilt-android-compiler:${versions.hilt}"
+    // Hilt Testing
+    testImplementation "com.google.dagger:hilt-android-testing:2.44"
+    kaptTest "com.google.dagger:hilt-android-compiler:2.44"
+
+    // Hilt and WorkManager integration
+    implementation "androidx.hilt:hilt-work:1.0.0"
+    kapt "androidx.hilt:hilt-compiler:1.0.0"
+// When using Java.
+    annotationProcessor("androidx.hilt:hilt-compiler:1.0.0")
+
+    // WorkManager
+    implementation "androidx.work:work-runtime-ktx:2.7.1"
 
 
     //navigation
@@ -118,4 +133,17 @@ dependencies {
 
     //pagination
     implementation 'com.github.jakob-grabner:Circle-Progress-View:1.4'
+    implementation 'com.jakewharton.timber:timber:5.0.1'
+
+    // For unit testing
+    // Testing dependencies
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.mockito:mockito-core:3.11.2'
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.0'
+    testImplementation 'io.mockk:mockk:1.12.0'
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.5.2'
+    testImplementation 'androidx.arch.core:core-testing:2.1.0'
+    testImplementation 'androidx.test.ext:junit:1.1.5'
+    testImplementation 'org.robolectric:robolectric:4.9'
+
 }

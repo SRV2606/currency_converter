@@ -1,5 +1,7 @@
 package com.example.domain.models
 
+import com.example.domain.domain.models.ApiError
+
 
 sealed class ClientResult<out T> {
     data class Success<out T>(val data: T) : ClientResult<T>()

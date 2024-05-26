@@ -1,4 +1,4 @@
-rootProject.name = "starwars"
+rootProject.name = "currency"
 include ':app'
 include ':data'
 include ':domain'
