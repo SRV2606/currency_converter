@@ -68,7 +68,6 @@ class CurrencyForegroundService : Service() {
     }
 
     private fun updateNotification(message: String) {
-        // Update the notification with the provided message
         val notification = createNotification(message)
     }
 
@@ -112,6 +111,6 @@ class CurrencyForegroundService : Service() {
 
     override fun onDestroy() {
         super.onDestroy()
-        serviceJob.cancel() // Cancel the service's job when the service is destroyed
+        serviceJob.cancel() // Canceling the service's job when the service is destroyed
     }
 }

@@ -65,7 +65,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
         val repeatInterval =
             1000L // Repeat interval, keeping it low for testing purposes , else we can have 30 mins
         val periodicWorkRequest = PeriodicWorkRequestBuilder<CurrencyWorker>(
-            repeatInterval, TimeUnit.SECONDS
+            1000, TimeUnit.MILLISECONDS
         )
             .setConstraints(constraints)
             .setInitialDelay(0, TimeUnit.MILLISECONDS)
