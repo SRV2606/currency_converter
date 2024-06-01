@@ -29,18 +29,6 @@ provide a seamless currency conversion experience.
 - **Unit Tests**: Includes unit tests to ensure the correct operation of the application.
 - **Code Comments**: Codebase is well-commented for better readability and understanding.
 
-## Functional Requirements Coverage
-
-All the functional requirements specified in the assignment are fully covered, including:
-
-- Local data persistence for offline usage
-- Bandwidth optimization for data refresh
-- Currency selection and desired amount entry
-- Currency conversion with fallback mechanism
-- Handling of floating point errors
-- Unit tests to ensure correct operation
-- Major focus on code quality and
-
 ## Getting Started
 
 To run the app, simply clone the repository and open it in Android Studio. Make sure to have the
